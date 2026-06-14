@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="Rock_paper_scissor.css">
+</head>
+<body>
+    <div class="bg-orb orb-one" aria-hidden="true"></div>
+    <div class="bg-orb orb-two" aria-hidden="true"></div>
+    <div class="bg-orb orb-three" aria-hidden="true"></div>
+
+    <main class="game-shell">
+        <header class="hero">
+            <p class="eyebrow"></p>
+            <h1 class="title">✊ ✋ ✌️ Rock Paper Scissors</h1>
+            <h1 class="title">🫱🏻✊🏻✌🏻 Rock Paper Scissors</h1>
+            <p class="subtitle">Pick your move and start the glowing showdown.</p>
+        </header>
+
+        <section class="choice-panel" aria-label="Choose your move">
+            <div class="buttons" role="group" aria-label="Rock Paper Scissors choices">
+                <button class="choice-btn" data-choice="rock" type="button">
+                    <span class="choice-emoji">✊</span>
+                    <span class="choice-emoji">✊🏻</span>
+                    <span class="choice-label">Rock</span>
+                </button>
+                <button class="choice-btn" data-choice="paper" type="button">
+                    <span class="choice-emoji">✋</span>
+                    <span class="choice-emoji">🫱🏻</span>
+                    <span class="choice-label">Paper</span>
+                </button>
+                <button class="choice-btn" data-choice="scissors" type="button">
+                    <span class="choice-emoji">✌️</span>
+                    <span class="choice-emoji">✌🏻</span>
+                    <span class="choice-label">Scissors</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="resultPanel" class="result-panel state-idle" aria-live="polite">
+            <p id="userChoice" class="choice-line">Your Choice: -</p>
+            <p id="computerChoice" class="choice-line">Computer Choice: -</p>
+            <h2 id="result">Result</h2>
+            <p id="streak" class="streak">Streak: No streak yet.</p>
+        </section>
+
+        <section class="score-board" aria-label="Score board">
+            <article class="score-card">
+                <h3>You</h3>
+                <p id="userScore" class="score-value">0</p>
+            </article>
+            <article class="score-card">
+                <h3>Computer</h3>
+                <p id="computerScore" class="score-value">0</p>
+            </article>
+        </section>
+
+        <section class="history-panel" aria-live="polite">
+            <h3>Recent Rounds</h3>
+            <ul id="historyList">
+                <li class="history-empty">No rounds yet. Make your first move.</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="Rock_paper_scissor.js"></script>
+</body>
+</html>
